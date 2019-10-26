@@ -1,14 +1,14 @@
 //Dummy
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 function UsuarioItem(props){
-	const {nombre, edad} = props;
+	const {id, nombre, edad, onPress} = props;
 	return(
-		<View style={styles.container}>
+		<TouchableOpacity style={styles.container} onPress={() => onPress(id)}>
 			<Text>{nombre}</Text>
 			<Text>{edad}</Text>
-		</View>
+		</TouchableOpacity>
 	);
 }
 
